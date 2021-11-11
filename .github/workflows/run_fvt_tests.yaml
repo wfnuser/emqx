@@ -73,8 +73,7 @@ jobs:
           - 24.1.1-emqx-1
         cluster_db_backend:
           - "mnesia"
-          # FIXME: temporarily disabled: too flaky at the moment
-          # - "rlog"
+          - "rlog"
 
     steps:
     - uses: actions/download-artifact@v2
@@ -182,8 +181,8 @@ jobs:
         kubectl logs emqx-2
     - uses: actions/checkout@v2
       with:
-        repository: emqx/paho.mqtt.testing
-        ref: develop-4.0
+        repository: thalesmg/paho.mqtt.testing
+        ref: develop-4.0-2
         path: paho.mqtt.testing
     - name: install pytest
       run: |

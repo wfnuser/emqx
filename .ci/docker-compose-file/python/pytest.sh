@@ -18,7 +18,7 @@ else
 fi
 
 apk update && apk add git curl
-git clone -b develop-4.0 https://github.com/emqx/paho.mqtt.testing.git /paho.mqtt.testing
+git clone -b develop-4.0-2 https://github.com/thalesmg/paho.mqtt.testing.git /paho.mqtt.testing
 pip install pytest
 
 pytest -v /paho.mqtt.testing/interoperability/test_client/V5/test_connect.py -k test_basic --host "$TARGET_HOST"
